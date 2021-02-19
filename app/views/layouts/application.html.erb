@@ -18,30 +18,21 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-  <p class="navbar-text float-right">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-  </p>
+  <%= render "shared/navbar"%>
 
-   <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="/ideas">Ade App</a>
-    </li>
-    </ul>
-
-    <div class="container">
-  <br>
+    <%# <div class="container"> %>
+  <div class="d-flex position-relative">
+  <% if current_user %>
+  <%= render "shared/sidebar"%>
+  <%end%>
+  <div class='w-100 p-4 main-wrapper'>
+    <p class="notice m-0 p-0"><%= notice %></p>
+    <p class="alert m-0 p-0"><%= alert %></p>
     <%= yield %>
   </div>
+  </div>
+  <%# </div> %>
 
   <!-- Optional JavaScript; choose one of the two! -->
 
