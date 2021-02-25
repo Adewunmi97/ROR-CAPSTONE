@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary navb justify-content-between">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary justify-content-between">
       <a class="logo text-danger nav-link" href="/ideas">Ade App</a>
 
-  <ul class="navbar-nav flex-row ms-auto mb-2 mb-lg-0">
+  <ul class="navbar-nav flex-row ms-auto mb-0">
         <% if user_signed_in? %>
       Logged in as:<strong><%= current_user.email %></strong>
 
         <li class="nav-item">
-          <%= button_to 'Edit profile', edit_user_registration_path, :class => 'nav-link' %>
+          <%= button_to 'Edit profile', edit_user_registration_path, method: :get, :class => 'nav-link'%>
         </li>
 
         <li class= "nav-item">
