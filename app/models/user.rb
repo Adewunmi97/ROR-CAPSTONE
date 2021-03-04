@@ -9,8 +9,14 @@ class User < ApplicationRecord
          validates :password, presence: true
 
          has_many :opinions, foreign_key: 'author_id'
-         has_many :followings, foreign_key: 'follower_id'
-         has_many :followings, foreign_key: 'followed_id'
-         has_many :followers, through: :followings, source: 'follower'
-         has_many :followeds, through: :followings, source: 'followed'
+
+         has_many :super_followers, foreign_key: :follower_id, class_name: 'Following'
+         has_many :followed_users, through: :super_followers, source: :followed
+
+         has_many :following_users, foreign_key: :followed_id, class_name: 'Following'
+         has_many :followers, through: :following_users, source: :follower
+         has_one_attached :image
+
+         scope :most_recent, -> { order(created_at: :desc)}
+
 end

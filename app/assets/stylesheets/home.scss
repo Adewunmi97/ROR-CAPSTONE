@@ -2,16 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .img-res {
-    height: 80px;
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .img-res2 {
   height: 120px;
 }
 
+.f-by-img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* The sidebar menu */
 .sidenav {
-    // height: calc(100vh - 112px); /* Full-height: remove this if you want "auto" height */
     width: 15%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     height: 100%;
@@ -49,15 +58,45 @@
     color: #f1f1f1;
   }
 
+  .nt {
+    height: 200px;
+  }
+
   /* Style page content */
-  // .main {
-  //   // margin-left: 100px; /* Same as the width of the sidebar */
-  //   // padding: 0px 10px;
-  //   margin-top: 55px;
-  //   margin-left: 208px;
-  // }
 
   .cover-pic {
-    height: 380px;
+    height: 400px;
     width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .side-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /*...........grid.........*/
+
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: minmax( 1000px auto);
+  }
+
+  .nested {
+    grid-auto-rows: 200px;
+  }
+
+  .grid > div {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .fsz {
+    font-size: 16px;
+  }
+
+  .fsz-2 {
+    font-size: 13px;
   }

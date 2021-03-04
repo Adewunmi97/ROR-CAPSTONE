@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary justify-content-between">
-      <a class="logo text-danger nav-link" href="/ideas">Ade App</a>
+      <a class="logo font-weight-bolder text-dark nav-link" href="/ideas">Ade App</a>
 
   <ul class="navbar-nav flex-row ms-auto mb-0">
         <% if user_signed_in? %>
-      Logged in as:<strong><%= current_user.email %></strong>
+      <strong class="mx-2 pt-2 text-white-50"> Logged in as:<%= current_user.email %></strong>
 
         <li class="nav-item">
-          <%= button_to 'Edit profile', edit_user_registration_path, method: :get, :class => 'nav-link'%>
+          <%= button_to 'Edit profile', edit_user_registration_path, method: :get, :class => 'nav-link btn btn-dark mx-2 text-white-50'%>
         </li>
 
         <li class= "nav-item">
-        <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link'  %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link btn btn-dark mx-2 text-white-50'  %>
         </li>
 
         <% else %>
         <li class="nav-item">
-          <%= button_to "Sign up", new_user_registration_path, method: :get, :class => 'nav-link'  %>
+          <%= button_to "Sign up", new_user_registration_path, method: :get, :class => 'nav-link btn btn-dark mx-2 text-white-50'  %>
         </li>
 
         <li class="nav-item">
-          <%= button_to "Login", new_user_session_path, :class => 'nav-link'  %>
+          <%= button_to "Login", new_user_session_path, :class => 'nav-link btn btn-dark mx-2 text-white-50'  %>
         </li>
 
         <% end %>
