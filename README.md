@@ -15,14 +15,15 @@ Some of the advanced concepts explored in this project includes.
 
 ## Built With
 
-- Ruby v2.6.5
-- Ruby on Rails v6.0.3.2
+- Ruby v2.7.2
+- Ruby on Rails v6.0.3.6
 - RSpec
 - Bootstrap ~4.0
+- Postgres: >=13.2
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo]( https://my-ror.herokuapp.com/)
 
 ## Video Presentation
 
