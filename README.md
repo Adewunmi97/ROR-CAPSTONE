@@ -1,6 +1,6 @@
 # README
 
-Th# Ruby on Rails Capstone Project: Redesign of Twitter
+ Ruby on Rails Capstone Project: Redesign of Twitter
 
 > In this project I built a Job opinion application based on a redesign of Twitter.
 
@@ -11,7 +11,7 @@ Some of the advanced concepts explored in this project includes.
 - Used paperclip gem to achieve image upload for profile photo and cover image
 
 
-![screenshot](./screenshot.gif)
+![image](https://user-images.githubusercontent.com/60876346/115560449-838c0b80-a2ac-11eb-82bb-349bda1706b7.png)
 
 ## Built With
 
@@ -22,7 +22,7 @@ Some of the advanced concepts explored in this project includes.
 
 ## Live Demo
 
-[Live Demo](https://rorcapstone.herokuapp.com/)
+[Live Demo]()
 
 ## Video Presentation
 
@@ -37,12 +37,12 @@ To get a local copy up and running follow these simple example steps.
 
 Ruby: 2.7.2
 Rails: 6.0.3.6
-Postgres: >=13
+Postgres: >=13.2
 
 ### Setup
 
 ~~~bash
-$ git clone https://github.com/acushlakoncept/ror-capstone.git
+$ git clone https://github.com/Adewunmi97/ROR-CAPSTONE.git
 $ cd ROR-capstone
 ~~~
 
@@ -81,8 +81,8 @@ Open `http://localhost:3000/` in your browser.
 
 👤 **Shonibare Adewunmi**
 
-- Github: [@Adewunmi97](https://github.com/acushlakoncept/)
-- Twitter: [@ShonibareC](https://twitter.com/acushlakoncept)
+- Github: [@Adewunmi97](https://github.com/Adewunmi97)
+- Twitter: [@ShonibareC](https://twitter.com/ShonibareC)
 
 
 ## 🤝 Contributing
