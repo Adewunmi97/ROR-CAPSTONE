@@ -1,7 +1,7 @@
 <div class="grid">
     <div>
           <div class=" p-3 m-0 nested border nt">
-                <h3 class="font-weight-bolder"> New Opinion </h3>
+                <h3 class="font-weight-bolder"> Job Opinion </h3>
             <div class="card-body p-3">
                 <%= form_with url: "/opinions", method: :post do |form| %>
                 <%= form.text_field :text, class: 'form-control mb-2' %>
@@ -21,7 +21,7 @@
               <% end %>
             </div>
                   <div>
-                  <h5 class= 'font-weight-bolder ml-2 mt-2 fsz'> <%= tweet.author.username %> </h5>
+                  <h5 class= 'font-weight-bolder ml-3 pt-3 fsz'> <%= tweet.author.username %> </h5>
                     <p class= "pl-3 fsz-2 text-muted"> <%= tweet.text %> </p>
                   </div>
                 </div>

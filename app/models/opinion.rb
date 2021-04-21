@@ -1,8 +1,7 @@
 class Opinion < ApplicationRecord
-    belongs_to :author, class_name: 'User'
+  belongs_to :author, class_name: 'User'
 
-    validates :text, presence: true
+  validates :text, presence: true
 
-
-    scope :most_recent, -> { order(created_at: :desc)}
+  scope :most_recent, -> { order(created_at: :desc) }
 end

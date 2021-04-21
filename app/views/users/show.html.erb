@@ -8,11 +8,11 @@
                 <img src="https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt=90&pid=3.1&rm=2" class="cover-pic" alt="Generic user image">
             <% end %>
             <div class="card-body">
-                <h6 class="pb-0 mb-0"><%= link_to 'Tweets', user_path(@user) %></h6><hr>
+                <h6 class="pb-0 mb-0"><%= link_to 'My Opinions', user_path(@user), class: "text-dark font-weight-bolder pl-3" %></h6><hr>
                 <div class= "text-muted">
                     <% @user.opinions.most_recent.each do |opinion| %>
                         <div class="card-body text-muted">
-                            <p> <%= opinion.text %> <span><%= link_to 'Delete', opinion_path(opinion), method: :delete, class: 'btn btn-primary btn-sm ml-5' %></span></p>
+                            <p class="fsz text-muted"> <%= opinion.text %> <span><%= link_to 'Delete', opinion_path(opinion), method: :delete, class: 'btn btn-primary btn-sm ml-5 fsz-2' %></span></p>
                         </div><hr>
                     <% end %>
                 </div>
@@ -29,40 +29,40 @@
                 <% else %>
                     <img src="https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt=90&pid=3.1&rm=2" alt="Generic user image">
                 <% end %>
-                <p class="font-weight-bold text-muted"> <% @user.username %></p>
+                <p class="font-weight-bold"> <%= @user.username %></p>
                 <% if display_follow_btn %>
-                    <%= link_to 'Follow', user_path(@user), method: :patch, class: 'btn btn-primary btn-sm text-muted' %>
+                    <%= link_to 'Follow', user_path(@user), method: :patch, class: 'btn btn-primary btn-sm' %>
                 <% end %>
             </div>
 
             <div class="col-4 border bg-light">
-            <p class="font-weight-bolder text-muted text-center mt-3 mb-0"> <%= @user.opinions.length %> </p>
-            <p class="font-italic text-muted text-center font-weight-bolder"> Tweets </p>
+            <p class="font-weight-bolder text-center mt-3 mb-0"> <%= @user.opinions.length %> </p>
+            <p class="font-italic text-center font-weight-bolder"> Opinions </p>
             </div>
 
             <div class="col-4 border bg-light">
-            <p class="font-weight-bolder text-muted text-center mt-3 mb-0"> <%= @user.followed_users.length %> </p>
-            <p class="font-italic text-muted text-center font-weight-bolder"> following </p>
+            <p class="font-weight-bolder text-center mt-3 mb-0"> <%= @user.followed_users.length %> </p>
+            <p class="font-italic text-center font-weight-bolder"> Following </p>
             </div>
 
             <div class="col-4 border bg-light">
-            <p class="font-weight-bolder text-muted text-center mt-3 mb-0"> <%= @user.followers.length %> </p>
-            <p class="font-italic text-muted text-center font-weight-bolder"> followers </p>
+            <p class="font-weight-bolder text-center mt-3 mb-0"> <%= @user.followers.length %> </p>
+            <p class="font-italic text-center font-weight-bolder"> Followers </p>
             </div>
         </div>
         <div class="card align-self-stretch">
             <div class="card-header pb-0">
-                <p class="font-weight-bolder text-muted">FOLLOWED BY</p>
+                <p class="font-weight-bolder">Followed By</p>
             </div>
                 <div class="card-body">
                     <% @user.followers.most_recent[0..3].each do |user| %>
-                        <div class="card-body d-flex text-muted py-0">
+                        <div class="card-body d-flex py-0">
                         <% if user.image.attached? %>
                             <%= image_tag(user.image, class: "f-by-img rounded-circle") %>
                         <% else %>
                             <img src="https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt=90&pid=3.1&rm=2" class= "f-by-img rounded-circle", alt="Generic user image">
                         <% end %>
-                        <h4 class="ml-3 pt-2"> <%= user.username %> </h4>
+                        <h4 class="font-weight-bolder ml-3 pt-3 fsz"> <%= user.username %> </h4>
                         </div><hr>
                     <% end %>
                 </div>
