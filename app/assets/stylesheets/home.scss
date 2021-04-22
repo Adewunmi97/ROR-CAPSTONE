@@ -1,6 +1,3 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 .img-res {
   height: 80px;
   width: 80px;
@@ -19,18 +16,16 @@
   object-position: top;
 }
 
-/* The sidebar menu */
 .sidenav {
-  width: 15%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  width: 15%;
+  position: fixed;
   height: 100%;
-  z-index: 1; /* Stay on top */
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  z-index: 1;
+  background-color: #111;
+  overflow-x: hidden;
   padding-top: 20px;
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -45,7 +40,6 @@
 
 .navb {
   width: 85%;
-  // z-index: 99;
 }
 
 .navb2 {
@@ -53,7 +47,6 @@
   z-index: 99;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
 }
@@ -61,8 +54,6 @@
 .nt {
   height: 200px;
 }
-
-/* Style page content */
 
 .cover-pic {
   height: 400px;
@@ -75,8 +66,6 @@
   width: 40px;
   height: 40px;
 }
-
-/* ...........grid......... */
 
 .grid {
   display: grid;
