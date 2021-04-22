@@ -21,82 +21,82 @@
 
 /* The sidebar menu */
 .sidenav {
-    width: 15%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    height: 100%;
-    z-index: 1; /* Stay on top */
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-  }
+  width: 15%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  height: 100%;
+  z-index: 1; /* Stay on top */
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
 
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
 
-  .sideb {
-    width: 15%;
-  }
+.sideb {
+  width: 15%;
+}
 
-  .navb {
-    width: 85%;
-    // z-index: 99;
-  }
+.navb {
+  width: 85%;
+  // z-index: 99;
+}
 
-  .navb2 {
-    position: fixed;
-    z-index: 99;
-  }
+.navb2 {
+  position: fixed;
+  z-index: 99;
+}
 
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-  .nt {
-    height: 200px;
-  }
+.nt {
+  height: 200px;
+}
 
-  /* Style page content */
+/* Style page content */
 
-  .cover-pic {
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
+.cover-pic {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 
-  .side-img {
-    width: 40px;
-    height: 40px;
-  }
+.side-img {
+  width: 40px;
+  height: 40px;
+}
 
-  /*...........grid.........*/
+/* ...........grid......... */
 
-  .grid {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 1em;
-    grid-auto-rows: minmax( 1000px auto);
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(1000px, auto);
+}
 
-  .nested {
-    grid-auto-rows: 200px;
-  }
+.nested {
+  grid-auto-rows: 200px;
+}
 
-  .grid > div {
-    background-color: rgb(238, 238, 238);
-  }
+.grid > div {
+  background-color: rgb(238, 238, 238);
+}
 
-  .fsz {
-    font-size: 16px;
-  }
+.fsz {
+  font-size: 16px;
+}
 
-  .fsz-2 {
-    font-size: 13px;
-  }
+.fsz-2 {
+  font-size: 13px;
+}
