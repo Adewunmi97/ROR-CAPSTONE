@@ -2,11 +2,10 @@
     <% @users.each do |user| %>
         <%= link_to user_path(user) do%>
             <div class="d-flex flex-column card-body m-3 justify-content-center align-items-center">
-            <% if user.image.attached? %>
-                <%= image_tag(user.image, class: "img-res rounded-circle") %>
-            <% else %>
-                <img src="https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt=90&pid=3.1&rm=2" class= "img-res rounded-circle" alt="Generic user image">
-            <% end %>
+
+                <%= user_image(user, class: 'img-res rounded-circle') %>
+
+
                 <h4 class="badge badge-dark"> <%= user.username %> </h4>
             </div>
         <% end %>

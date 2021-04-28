@@ -1,11 +1,9 @@
 <div class="sidenav d-flex flex-column align-items-center">
   <%= link_to user_path(current_user) do %>
   <div class= " d-flex">
-    <% if current_user.image.attached? %>
-      <%= image_tag(current_user.image, class: "rounded side-img img-res") %>
-    <% else %>
-      <img src="https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt=90&pid=3.1&rm=2" alt="Generic user image">
-    <% end %>
+
+      <%= current_user_image(current_user, class: "rounded side-img img-res") %>
+
     <h5 class= 'text-white-50 ml-2 mt-2'> <%= current_user.username %> </h5>
   </div>
   <% end %>
