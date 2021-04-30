@@ -23,7 +23,7 @@ Some of the advanced concepts explored in this project includes.
 
 ## Live Demo
 
-[Live Demo]( https://my-ror.herokuapp.com/)
+[Live Demo]( https://ade-app.herokuapp.com/)
 
 ## Video Presentation
 

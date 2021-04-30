@@ -26,8 +26,7 @@
                     <%= user_image(@user, class: "rounded-circle side-img") %>
 
                 <p class="font-weight-bold"> <%= @user.username %></p>
-
-                    
+                <%= display_follow_btn(@user) %>
 
             </div>
 
@@ -54,7 +53,7 @@
                     <% @user.followers.most_recent[0..3].each do |user| %>
                         <div class="card-body d-flex py-0">
 
-                            <%= user_image(@user, class: "f-by-img rounded-circle") %>
+                            <%= user_image(user, class: "f-by-img rounded-circle") %>
 
                         <h4 class="font-weight-bolder ml-3 pt-3 fsz"> <%= user.username %> </h4>
                         </div><hr>

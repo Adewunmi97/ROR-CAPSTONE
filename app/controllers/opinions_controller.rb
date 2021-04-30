@@ -3,7 +3,6 @@ class OpinionsController < ApplicationController
     @opinion = current_user.opinions.build(sanitize_params)
     if @opinion.save
       flash[:notice] = 'Opinion created successfully'
-      puts 'OPINION CREATED!!!'
       redirect_to user_path(current_user)
     else
       flash[:error] = 'An error occured'
