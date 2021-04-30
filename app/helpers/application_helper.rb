@@ -1,7 +1,7 @@
 module ApplicationHelper
   def show_author_image(tweet, _extra_class = '')
     if tweet.author.image.attached?
-      image_tag(tweet.author.image, class: 'rounded-circle side-img')
+      cl_image_tag(tweet.author.image.key, class: 'rounded f-by-img')
     else
       image_tag(
         'https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt
@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def user_image(user, _extra_class = '')
     if user.image.attached?
-      image_tag(user.image, class: 'f-by-img rounded-circle')
+      cl_image_tag(user.image.key, class: 'f-by-img rounded-circle')
 
     else
       image_tag(
@@ -24,7 +24,8 @@ module ApplicationHelper
 
   def user_cover_pic(user, _extra_class = '')
     if user.image.attached?
-      image_tag(@user.image, class: 'cover-pic')
+      cl_image_tag(user.image.key, class: 'cover-pic')
+
     else
       image_tag(
         'https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&
@@ -39,7 +40,8 @@ module ApplicationHelper
 
   def current_user_image(current_user, _extra_class = '')
     if current_user.image.attached?
-      image_tag(current_user.image, class: 'rounded side-img img-res')
+      cl_image_tag(current_user.image.key, class: 'rounded side-img img-res')
+
     else
       image_tag('https://www.bing.com/th?id=OIP._x2YqKMtfxOjkfT8g9xIvQHaG5&w=103&h=100&c=8&rs=1&qlt=90&pid=3.1&rm=2',
                 alt: 'Generic user image', class: 'rounded side-img img-res')

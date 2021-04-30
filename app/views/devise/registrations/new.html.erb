@@ -28,11 +28,11 @@
   </div>
 
   <div class="mb-3">
-  <%= f.file_field :image, class:"form-control" %>
+  <%= f.file_field :image, class: 'form-control', direct_upload: true  %>
   </div>
 
   <div class="actions mb-3">
-    <%= f.submit "Get Started", class: "btn btn-primary" %>
+    <%= f.submit 'Get Started', class: 'btn sign-up-button btn-outline-secondary w-100 mt-3' %>
   </div>
 <% end %>
 

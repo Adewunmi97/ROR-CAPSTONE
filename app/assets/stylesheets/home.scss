@@ -51,41 +51,9 @@
   color: #f1f1f1;
 }
 
-.nt {
-  height: 200px;
-}
-
 .cover-pic {
   height: 400px;
   width: 100%;
   object-fit: cover;
   object-position: top;
-}
-
-.side-img {
-  width: 40px;
-  height: 40px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 1em;
-  grid-auto-rows: minmax(1000px, auto);
-}
-
-.nested {
-  grid-auto-rows: 200px;
-}
-
-.grid > div {
-  background-color: rgb(238, 238, 238);
-}
-
-.fsz {
-  font-size: 16px;
-}
-
-.fsz-2 {
-  font-size: 13px;
 }
