@@ -43,7 +43,7 @@ module ApplicationHelper
   end
 
   def display_follow_btn(user)
-    link_to 'Follow', user_path(user), method: :patch, class: 'badge badge-primary ml-3' if display_follow_btn?(user.id)
+    link_to 'Follow', user_path(user), method: :patch, class: 'badge badge-primary' if display_follow_btn?(user.id)
   end
 
   def current_user_image(current_user, _extra_class = '')
