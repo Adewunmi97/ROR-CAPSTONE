@@ -12,7 +12,6 @@
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -21,15 +20,11 @@
 
 <div class="d-flex">
 <div class="sideb">
-<% if current_user %>
-<%= render "shared/sidebar"%>
-<%end%>
+<%= auth_component "shared/sidebar"%>
 </div>
 <div class="navb">
-<% if current_user %>
-<div> <%= render "shared/navbar" %>
+<div> <%= auth_component "shared/navbar" %>
 </div>
-  <%end%>
   <div>
     <p class="notice m-0 p-0"><%= notice %></p>
     <p class="alert m-0 p-0"><%= alert %></p>
@@ -39,11 +34,6 @@
   </div>
 </div>
 
-
-
-    <%# <div class="container"> %>
-
-  <%# </div> %>
 
   <!-- Optional JavaScript; choose one of the two! -->
 
